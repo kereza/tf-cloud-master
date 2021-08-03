@@ -11,7 +11,10 @@ resource "tfe_workspace" "aws-org" {
   organization = tfe_organization.aws_org.id
   description = "Configures AWS Organization and IAM users/roles"
   terraform_version = "0.13.5"
-  //vcs_repo
+  vcs_repo {
+      identifier = "asasas"
+      branch = "main"
+  }
 }
 
 
