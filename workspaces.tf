@@ -6,7 +6,7 @@ resource "tfe_workspace" "aws-org" {
   vcs_repo {
       identifier = "kereza/aws-org"
       branch = "main"
-      oauth_token_id = "ot-QaQ2QKvnV9Y2nf2U"
+      oauth_token_id = "ot-JCvw4T59EFMc8dUm"
   }
 }
 
