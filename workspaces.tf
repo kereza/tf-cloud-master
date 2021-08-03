@@ -14,6 +14,7 @@ resource "tfe_workspace" "aws-org" {
   vcs_repo {
       identifier = "asasas"
       branch = "main"
+      oauth_token_id = "ot-QaQ2QKvnV9Y2nf2U"
   }
 }
 
