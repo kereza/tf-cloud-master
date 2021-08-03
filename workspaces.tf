@@ -28,3 +28,11 @@ resource "tfe_variable" "test" {
   workspace_id = tfe_workspace.aws-org.id
   description  = "a useful description"
 }
+
+resource "tfe_variable" "wtf" {
+  key          = "wtf"
+  value        = var.wtf
+  category     = "env"
+  workspace_id = tfe_workspace.aws-org.id
+  description  = "wtf desc"
+}
