@@ -13,3 +13,14 @@ resource "tfe_workspace" "aws-org" {
   terraform_version = "0.13.5"
   //vcs_repo
 }
+
+
+
+# Variables for workspaces
+resource "tfe_variable" "test" {
+  key          = "my_key_name"
+  value        = "my_value_name"
+  category     = "env"
+  workspace_id = tfe_workspace.aws-org.id
+  description  = "a useful description"
+}
