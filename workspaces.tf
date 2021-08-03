@@ -35,4 +35,5 @@ resource "tfe_variable" "wtf" {
   category     = "env"
   workspace_id = tfe_workspace.aws-org.id
   description  = "wtf desc"
+  sensitive = true
 }
