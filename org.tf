@@ -1,5 +1,5 @@
 resource "tfe_organization" "keri" {
-  name  = "keri-org"
+  name  = "first-org"
   email = "kereza85@gmail.com"
   session_timeout_minutes = 20160
   session_remember_minutes = 20160
