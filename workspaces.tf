@@ -24,7 +24,7 @@ resource "tfe_variable" "main_aws_access_key" {
 
 resource "tfe_variable" "main_aws_secret_key" {
   key          = "AWS_SECRET_ACCESS_KEY"
-  value        = var.MAIN_SECRET_KEY 
+  value        = var.MAIN_AWS_SECRET 
   category     = "env"
   workspace_id = tfe_workspace.aws-org.id
   description  = "MAIN_SECRET_KEY"
