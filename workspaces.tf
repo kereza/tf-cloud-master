@@ -13,19 +13,29 @@ resource "tfe_workspace" "aws-org" {
 
 
 # Variables for workspaces
-resource "tfe_variable" "test" {
-  key          = "my_key_name"
-  value        = "my_value_name"
+resource "tfe_variable" "main_aws_access_key" {
+  key          = "AWS_ACCESS_KEY_ID"
+  value        = var.MAIN_AWS_KEY 
   category     = "env"
   workspace_id = tfe_workspace.aws-org.id
-  description  = "a useful description"
+  description  = "MAIN_AWS_KEY"
+  sensitive = true
 }
 
-resource "tfe_variable" "wtf" {
-  key          = "wtf"
-  value        = var.wtf
+resource "tfe_variable" "main_aws_secret_key" {
+  key          = "AWS_SECRET_ACCESS_KEY"
+  value        = var.MAIN_SECRET_KEY 
   category     = "env"
   workspace_id = tfe_workspace.aws-org.id
-  description  = "wtf desc"
+  description  = "MAIN_SECRET_KEY"
   sensitive = true
+}
+
+resource "tfe_variable" "aws_default_region" {
+  key          = "AWS_DEFAULT_REGION"
+  value        = "eu-central-1"
+  category     = "env"
+  workspace_id = tfe_workspace.aws-org.id
+  description  = "AWS_DEFAULT_REGION"
+  sensitive = false
 }
