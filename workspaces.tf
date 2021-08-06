@@ -63,3 +63,23 @@ resource "tfe_variable" "core_workspaces_env" {
   description  = "Environment"
   sensitive = false
 }
+
+resource "tfe_variable" "core_workspaces_main_aws_access_key" {
+  for_each     = var.core_workspaces
+  key          = "AWS_ACCESS_KEY_ID"
+  value        = var.OPS_AWS_KEY
+  category     = "env"
+  workspace_id = tfe_workspace.core_workspaces[each.key].id
+  description  = "Environment"
+  sensitive = true
+}
+
+resource "tfe_variable" "core_workspaces_main_aws_secret_key" {
+  for_each     = var.core_workspaces
+  key          = "AWS_SECRET_ACCESS_KEY"
+  value        = var.OPS_AWS_SECRET
+  category     = "env"
+  workspace_id = tfe_workspace.core_workspaces[each.key].id
+  description  = "Environment"
+  sensitive = true
+}
