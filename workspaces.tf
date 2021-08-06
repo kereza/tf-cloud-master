@@ -54,7 +54,7 @@ resource "tfe_workspace" "core_workspaces" {
 }
 
 # Default variables for the CORE AWS workspaces
-resource "tfe_variable" "main_aws_access_key" {
+resource "tfe_variable" "core_workspaces_env" {
   for_each     = var.core_workspaces
   key          = "env"
   value        = each.value.environment
