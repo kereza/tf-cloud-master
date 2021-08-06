@@ -23,7 +23,7 @@ variable "core_workspaces" {
         branch = "main"
         repo = "kereza/tf-core"
         description = "description"
-        environment = "prod"
+        environment = "dev"
       }
     }
 }
