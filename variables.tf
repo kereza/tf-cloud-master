@@ -34,6 +34,15 @@ variable "core_workspaces" {
         account_id = "131845455848"
         region = "eu-central-1"
       },
+      vpc-prod = {
+        working_directory = "vpc"
+        branch = "main"
+        repo = "kereza/tf-core"
+        description = "description"
+        environment = "prod"
+        account_id = "131845455848"
+        region = "eu-central-1"
+      },
       security-dev = {
         working_directory = "security"
         branch = "main"
