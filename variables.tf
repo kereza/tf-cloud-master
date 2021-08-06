@@ -4,7 +4,7 @@ variable "MAIN_AWS_SECRET" {}
 
 variable "core_workspaces" {
     description = "asas"
-    type = map(string)
+    type = map(map(string))
     default = {
       vpc-dev = {
         working_directory = "vpc"
