@@ -64,6 +64,16 @@ resource "tfe_variable" "core_workspaces_env" {
   sensitive = false
 }
 
+resource "tfe_variable" "core_workspaces_region" {
+  for_each     = var.core_workspaces
+  key          = "region"
+  value        = each.value.region
+  category     = "terraform"
+  workspace_id = tfe_workspace.core_workspaces[each.key].id
+  description  = "Default region"
+  sensitive = false
+}
+
 resource "tfe_variable" "core_workspaces_account_id" {
   for_each     = var.core_workspaces
   key          = "account_id"

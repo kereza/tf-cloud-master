@@ -32,6 +32,7 @@ variable "core_workspaces" {
         description = "description"
         environment = "dev"
         account_id = "131845455848"
+        region = "eu-central-1"
       },
       security-dev = {
         working_directory = "security"
@@ -40,6 +41,7 @@ variable "core_workspaces" {
         description = "description"
         environment = "dev"
         account_id = "131845455848"
+        region = "eu-central-1"
       }
     }
 }
