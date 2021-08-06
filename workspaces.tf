@@ -10,19 +10,6 @@ resource "tfe_workspace" "aws-org" {
   }
 }
 
-resource "tfe_workspace" "tf_core_vpc_dev" {
-  name         = "vpc-dev"
-  organization = "main-organization"
-  description = "VPC for the Development stage"
-  terraform_version = "0.13.5"
-  working_directory = "vpc"
-  vcs_repo {
-      identifier = "kereza/tf-core"
-      branch = "main"
-      oauth_token_id = "ot-JCvw4T59EFMc8dUm"
-  }
-}
-
 resource "tfe_workspace" "core_workspaces" {
   for_each     = var.core_workspaces
   name         = each.key
