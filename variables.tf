@@ -31,6 +31,7 @@ variable "core_workspaces" {
         repo = "kereza/tf-core"
         description = "description"
         environment = "dev"
+        account_id = "131845455848"
       },
       security-dev = {
         working_directory = "security"
@@ -38,6 +39,7 @@ variable "core_workspaces" {
         repo = "kereza/tf-core"
         description = "description"
         environment = "dev"
+        account_id = "131845455848"
       }
     }
 }

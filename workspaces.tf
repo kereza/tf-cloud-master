@@ -58,9 +58,19 @@ resource "tfe_variable" "core_workspaces_env" {
   for_each     = var.core_workspaces
   key          = "env"
   value        = each.value.environment
-  category     = "env"
+  category     = "terraform"
   workspace_id = tfe_workspace.core_workspaces[each.key].id
   description  = "Environment"
+  sensitive = false
+}
+
+resource "tfe_variable" "core_workspaces_account_id" {
+  for_each     = var.core_workspaces
+  key          = "account_id"
+  value        = each.value.account_id
+  category     = "terraform"
+  workspace_id = tfe_workspace.core_workspaces[each.key].id
+  description  = "Account ID. Used to assume role in the provider"
   sensitive = false
 }
 
