@@ -54,11 +54,6 @@ resource "tfe_workspace" "core_workspaces" {
   }
 }
 
-data "tfe_workspace_ids" "all" {
-  names        = ["*"]
-  organization = "main-organization"
-}
-
 # Default variables for the CORE AWS workspaces
 resource "tfe_variable" "core_workspaces_env" {
   for_each     = var.core_workspaces
