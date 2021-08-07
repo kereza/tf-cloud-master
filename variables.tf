@@ -36,7 +36,7 @@ variable "core_workspaces" {
       },
       vpc-prod = {
         working_directory = "vpc"
-        branch = "main"
+        branch = "prod"
         repo = "kereza/tf-core"
         description = "description"
         environment = "prod"
