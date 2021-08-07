@@ -46,7 +46,7 @@ resource "tfe_workspace" "core_workspaces" {
   description = each.value.description
   terraform_version = "0.13.5"
   working_directory = each.value.working_directory
-  remote_state_consumer_ids = [tfe_workspace.core_workspaces["vpc-dev"].id, tfe_workspace.core_workspaces["vpc-prod"].id]
+  remote_state_consumer_ids = [tfe_workspace.core_workspaces["vpc-prod"].id]
   vcs_repo {
       identifier = each.value.repo
       branch = each.value.branch
