@@ -46,12 +46,17 @@ resource "tfe_workspace" "core_workspaces" {
   description = each.value.description
   terraform_version = "0.13.5"
   working_directory = each.value.working_directory
-  remote_state_consumer_ids = [tfe_workspace.core_workspaces["vpc-prod"].id]
+  //remote_state_consumer_ids = [tfe_workspace.core_workspaces["vpc-prod"].id]
   vcs_repo {
       identifier = each.value.repo
       branch = each.value.branch
       oauth_token_id = var.oauth_token_id
   }
+}
+
+data "tfe_workspace_ids" "all" {
+  names        = ["*"]
+  organization = "main-organization"
 }
 
 # Default variables for the CORE AWS workspaces
