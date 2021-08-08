@@ -51,6 +51,15 @@ variable "core_workspaces" {
         environment = "dev"
         account_id = "131845455848"
         region = "eu-central-1"
+      },
+      security-prod = {
+        working_directory = "security"
+        branch = "main"
+        repo = "kereza/tf-core"
+        description = "description"
+        environment = "prod"
+        account_id = "131845455848"
+        region = "eu-central-1"
       }
     }
 }
