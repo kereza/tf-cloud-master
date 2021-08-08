@@ -1,7 +1,3 @@
-output "workspace_id" {
-  value = tfe_workspace.aws-org.id
-}
-
 data "tfe_workspace_ids" "all" {
   names        = ["*"]
   organization = "main-organization"
