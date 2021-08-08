@@ -8,5 +8,5 @@ data "tfe_workspace_ids" "all" {
 }
 
 output "workspace_id_all" {
-  value = data.tfe_workspace.all
+  value = data.tfe_workspace_ids.all
 }
