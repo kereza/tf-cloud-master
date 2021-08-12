@@ -27,7 +27,7 @@ variable "core_workspaces" {
   default = {
     vpc-dev = {
       working_directory = "vpc"
-      branch            = "main"
+      branch            = "dev"
       repo              = "kereza/tf-core"
       description       = "description"
       environment       = "dev"
@@ -36,7 +36,7 @@ variable "core_workspaces" {
     },
     vpc-prod = {
       working_directory = "vpc"
-      branch            = "main"
+      branch            = "prod"
       repo              = "kereza/tf-core"
       description       = "description"
       environment       = "prod"
@@ -45,7 +45,7 @@ variable "core_workspaces" {
     },
     security-dev = {
       working_directory = "security"
-      branch            = "main"
+      branch            = "dev"
       repo              = "kereza/tf-core"
       description       = "description"
       environment       = "dev"
@@ -54,7 +54,7 @@ variable "core_workspaces" {
     },
     security-prod = {
       working_directory = "security"
-      branch            = "main"
+      branch            = "prod"
       repo              = "kereza/tf-core"
       description       = "description"
       environment       = "prod"
