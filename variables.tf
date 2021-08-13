@@ -29,7 +29,7 @@ variable "core_workspaces" {
       working_directory = "vpc"
       branch            = "dev"
       repo              = "kereza/tf-core"
-      description       = "description"
+      description       = "VPC creation"
       environment       = "dev"
       account_id        = "131845455848"
       region            = "eu-central-1"
@@ -38,7 +38,7 @@ variable "core_workspaces" {
       working_directory = "vpc"
       branch            = "prod"
       repo              = "kereza/tf-core"
-      description       = "description"
+      description       = "VPC creation"
       environment       = "prod"
       account_id        = "131845455848"
       region            = "eu-central-1"
@@ -47,7 +47,7 @@ variable "core_workspaces" {
       working_directory = "security"
       branch            = "dev"
       repo              = "kereza/tf-core"
-      description       = "description"
+      description       = "Security Groups"
       environment       = "dev"
       account_id        = "131845455848"
       region            = "eu-central-1"
@@ -56,10 +56,28 @@ variable "core_workspaces" {
       working_directory = "security"
       branch            = "prod"
       repo              = "kereza/tf-core"
-      description       = "description"
+      description       = "Security Groups"
       environment       = "prod"
       account_id        = "131845455848"
       region            = "eu-central-1"
     }
+    eks-dev = {
+      working_directory = "eks"
+      branch            = "dev"
+      repo              = "kereza/tf-core"
+      description       = "EKS cluster"
+      environment       = "dev"
+      account_id        = "131845455848"
+      region            = "eu-central-1"
+    },
+    eks-prod = {
+      working_directory = "eks"
+      branch            = "prod"
+      repo              = "kereza/tf-core"
+      description       = "EKS cluster"
+      environment       = "prod"
+      account_id        = "131845455848"
+      region            = "eu-central-1"
+    },
   }
 }
