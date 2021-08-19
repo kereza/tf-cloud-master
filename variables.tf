@@ -26,7 +26,7 @@ variable "core_workspaces" {
   type        = map(map(string))
   default = {
     tf-central-vpn = {
-      working_directory = ""
+      working_directory = null
       branch            = "main"
       repo              = "kereza/tf-central-vpn"
       description       = "Central VPN and VPC"
