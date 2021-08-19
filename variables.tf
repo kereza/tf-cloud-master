@@ -25,6 +25,15 @@ variable "core_workspaces" {
   description = "Worskpaces and their settings"
   type        = map(map(string))
   default = {
+    tf-central-vpn = {
+      working_directory = "/"
+      branch            = "main"
+      repo              = "kereza/tf-central-vpn"
+      description       = "Central VPN and VPC"
+      environment       = "infra"
+      account_id        = "131845455848"
+      region            = "eu-central-1"
+    },
     vpc-dev = {
       working_directory = "vpc"
       branch            = "dev"
