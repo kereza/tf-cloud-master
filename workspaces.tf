@@ -46,6 +46,7 @@ resource "tfe_workspace" "core_workspaces" {
   description         = each.value.description
   terraform_version   = "0.13.5"
   working_directory   = each.value.working_directory
+  speculative_enabled = false
   auto_apply          = each.value.branch == "dev" ? true : false
   execution_mode      = each.value.branch == "dev" ? "local" : "remote"
   global_remote_state = true
