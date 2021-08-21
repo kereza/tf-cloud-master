@@ -1,4 +1,4 @@
-# tf-cloud-master
+# setting up the Terrafom Cloud environment, the workspaces, the environment variables etc
 
 This repo is part of series of personal repos where I do tests on the following topics:
 
