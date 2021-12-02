@@ -48,7 +48,8 @@ resource "tfe_workspace" "core_workspaces" {
   working_directory   = each.value.working_directory
   speculative_enabled = false
   auto_apply          = each.value.branch == "dev" ? true : false
-  execution_mode      = each.value.branch == "dev" ? "local" : "remote"
+  execution_mode      = "remote"
+  //execution_mode      = each.value.branch == "dev" ? "local" : "remote"
   global_remote_state = true
   //remote_state_consumer_ids = [tfe_workspace.core_workspaces["vpc-prod"].id]
   vcs_repo {
