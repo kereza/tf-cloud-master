@@ -88,5 +88,14 @@ variable "core_workspaces" {
       account_id        = "131845455848"
       region            = "eu-central-1"
     },
+    vpc-kerezov-test = {
+      working_directory = "vpc"
+      branch            = "dev"
+      repo              = "kereza/tf-core"
+      description       = "VPC creation"
+      environment       = "kerezov-test"
+      account_id        = "441150344550"
+      region            = "eu-central-1"
+    }
   }
 }
