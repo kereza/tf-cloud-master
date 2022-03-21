@@ -93,7 +93,7 @@ resource "tfe_variable" "core_workspaces_account_id" {
 resource "tfe_variable" "core_workspaces_main_aws_access_key" {
   for_each     = var.core_workspaces
   key          = "AWS_ACCESS_KEY_ID"
-  value        = var.OPS_AWS_KEY
+  value        = each.value["account_id"] == "441150344550" ? var.PLAYGROUND_AWS_KEY : var.OPS_AWS_KEY
   category     = "env"
   workspace_id = tfe_workspace.core_workspaces[each.key].id
   description  = "Environment"
@@ -103,7 +103,7 @@ resource "tfe_variable" "core_workspaces_main_aws_access_key" {
 resource "tfe_variable" "core_workspaces_main_aws_secret_key" {
   for_each     = var.core_workspaces
   key          = "AWS_SECRET_ACCESS_KEY"
-  value        = var.OPS_AWS_SECRET
+  value        = each.value["account_id"] == "441150344550" ? var.PLAYGROUND_AWS_SECRET : var.OPS_AWS_SECRET
   category     = "env"
   workspace_id = tfe_workspace.core_workspaces[each.key].id
   description  = "Environment"

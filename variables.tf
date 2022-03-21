@@ -15,6 +15,15 @@ variable "OPS_AWS_SECRET" {
   type        = string
 }
 
+variable "PLAYGROUND_AWS_KEY" {
+  description = "The AWS KEY used by the CloudOPS system roles. Used for building infrastructure. Placed manually in the aws-org, but distributed as env variable across other workspaces"
+  type        = string
+}
+variable "PLAYGROUND_AWS_SECRET" {
+  description = "The AWS KEY used by the CloudOPS system roles. Used for building infrastructure. Placed manually in the aws-org, but distributed as env variable across other workspaces"
+  type        = string
+}
+
 variable "oauth_token_id" {
   description = "Token for GitHUb communication"
   type        = string
@@ -92,7 +101,7 @@ variable "core_workspaces" {
       working_directory = "vpc"
       branch            = "dev"
       repo              = "kereza/tf-core"
-      description       = "VPC creation"
+      description       = "VPC creation for TIS PlayGround"
       environment       = "kerezov-test"
       account_id        = "441150344550"
       region            = "eu-central-1"
