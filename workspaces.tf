@@ -44,7 +44,7 @@ resource "tfe_workspace" "core_workspaces" {
   name                = each.key
   organization        = "main-organization"
   description         = each.value.description
-  terraform_version   = "0.13.5"
+  terraform_version   = "1.1.2"
   working_directory   = each.value.working_directory
   speculative_enabled = false
   auto_apply          = each.value.branch == "dev" ? true : false

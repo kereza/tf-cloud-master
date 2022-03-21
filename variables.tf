@@ -99,7 +99,7 @@ variable "core_workspaces" {
     },
     vpc-kerezov-test = {
       working_directory = "vpc"
-      branch            = "dev"
+      branch            = "kerezov"
       repo              = "kereza/tf-core"
       description       = "VPC creation for TIS PlayGround"
       environment       = "kerezov-test"
