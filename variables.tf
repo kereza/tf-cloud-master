@@ -27,7 +27,7 @@ variable "PLAYGROUND_AWS_SECRET" {
 variable "oauth_token_id" {
   description = "Token for GitHUb communication"
   type        = string
-  default     = "ot-JCvw4T59EFMc8dUm"
+  default     = "ot-EMTJCCrHxKZvriCA"
 }
 
 variable "core_workspaces" {
